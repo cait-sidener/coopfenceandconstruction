@@ -8,7 +8,9 @@
   <title>
     Co-Op Fence and Construction
   </title>
-  <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe" crossorigin="anonymous"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js"
+    integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe" crossorigin="anonymous">
+  </script>
 </head>
 
 <body>
@@ -180,36 +182,37 @@
           <h1>Contact Us</h1>
           <div class="contact-text">
             <div class="img-icon">
-            <img src="./images/map.png" />
+              <img src="./images/map.png" />
             </div>
             <div class="left-text">
-            <p>5007 NW Linden Rd</p>
-            <p>Kansas, City, MO 64151</p>
+              <p>5007 NW Linden Rd</p>
+              <p>Kansas, City, MO 64151</p>
             </div>
           </div>
           <div class="contact-text">
             <div class="img-icon">
-            <img src="./images/phone.png" />
+              <img src="./images/phone.png" />
             </div>
             <div class="left-text">
-            <p><a style="color: #fff;" href="tel:8166568040">816-656-8040</a></p>
+              <p><a style="color: #fff;" href="tel:8166568040">816-656-8040</a></p>
             </div>
           </div>
           <div class="contact-text">
             <div class="img-icon">
-            <img src="./images/email.png" />
+              <img src="./images/email.png" />
             </div>
             <div class="left-text">
-            <p><a style="color: #fff;" href="mailto:coopfenceandconstruction@gmail.com">coopfenceandconstruction@gmail.com</a></p>
+              <p><a style="color: #fff;"
+                  href="mailto:coopfenceandconstruction@gmail.com">coopfenceandconstruction@gmail.com</a></p>
             </div>
           </div>
           <div class="contact-text">
             <div class="img-icon">
-            <img src="./images/time.png" />
+              <img src="./images/time.png" />
             </div>
             <div class="left-text">
-            <p>Monday - Friday: 8am - 6pm</p>
-            <p>Saturday & Sunday: By Appointment</p>
+              <p>Monday - Friday: 8am - 6pm</p>
+              <p>Saturday & Sunday: By Appointment</p>
             </div>
           </div>
         </div>
@@ -218,15 +221,131 @@
   </main>
   <footer id="bottom">
     <div class="rounded-social-buttons">
-      <a class="social-button facebook" href="https://www.facebook.com/CoopfenceandconstructionLLC/" target="_blank"><i class="fab fa-facebook-f"></i></a>
-      <a class="social-button twitter" href="https://www.twitter.com/CoopFence" target="_blank"><i class="fab fa-twitter"></i></a>
-      <a class="social-button yelp" href="https://www.yelp.com/biz/zBYZrSFdLkRfb2mDBQrUPQ" target="_blank"><i class="fab fa-yelp"></i></a>
-      <a class="social-button instagram" href="https://www.instagram.com/coopfence" target="_blank"><i class="fab fa-instagram"></i></a>
-  </div>
-  <p class="footer-text">Copyright Co-Op Fence and Construction Ltd 2022</p>
+      <a class="social-button facebook" href="https://www.facebook.com/CoopfenceandconstructionLLC/" target="_blank"><i
+          class="fab fa-facebook-f"></i></a>
+      <a class="social-button twitter" href="https://www.twitter.com/CoopFence" target="_blank"><i
+          class="fab fa-twitter"></i></a>
+      <a class="social-button yelp" href="https://www.yelp.com/biz/zBYZrSFdLkRfb2mDBQrUPQ" target="_blank"><i
+          class="fab fa-yelp"></i></a>
+      <a class="social-button instagram" href="https://www.instagram.com/coopfence" target="_blank"><i
+          class="fab fa-instagram"></i></a>
+    </div>
+    <p class="footer-text">Copyright Co-Op Fence and Construction Ltd 2022</p>
   </footer>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script src="js/script.js"></script>
+  <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      class StickyNavigation {
+        
+        constructor() {
+          this.currentId = null;
+          this.currentTab = null;
+          this.tabContainerHeight = 70;
+          let self = this;
+          $('.et-hero-tab').click(function () {
+            self.onTabClick(event, $(this));
+          });
+          $(window).scroll(() => {
+            this.onScroll();
+          });
+          $(window).resize(() => {
+            this.onResize();
+          });
+        }
+
+        onTabClick(event, element) {
+          event.preventDefault();
+          let scrollTop = $(element.attr('href')).offset().top - this.tabContainerHeight + 1;
+          $('html, body').animate({
+            scrollTop: scrollTop
+          }, 600);
+        }
+
+        onScroll() {
+          this.checkTabContainerPosition();
+          this.findCurrentTabSelector();
+        }
+
+        onResize() {
+          if (this.currentId) {
+            this.setSliderCss();
+          }
+        }
+
+        checkTabContainerPosition() {
+          let offset = $('.et-hero-tabs').offset().top + $('.et-hero-tabs').height() - this.tabContainerHeight;
+          if ($(window).scrollTop() > offset) {
+            $('.et-hero-tabs-container').addClass('et-hero-tabs-container--top');
+          } else {
+            $('.et-hero-tabs-container').removeClass('et-hero-tabs-container--top');
+          }
+        }
+
+        findCurrentTabSelector(element) {
+          let newCurrentId;
+          let newCurrentTab;
+          let self = this;
+          $('.et-hero-tab').each(function () {
+            let id = $(this).attr('href');
+            let offsetTop = $(id).offset().top - self.tabContainerHeight;
+            let offsetBottom = $(id).offset().top + $(id).height() - self.tabContainerHeight;
+            if ($(window).scrollTop() > offsetTop && $(window).scrollTop() < offsetBottom) {
+              newCurrentId = id;
+              newCurrentTab = $(this);
+            }
+          });
+          if (this.currentId != newCurrentId || this.currentId === null) {
+            this.currentId = newCurrentId;
+            this.currentTab = newCurrentTab;
+            this.setSliderCss();
+          }
+        }
+
+        setSliderCss() {
+          let width = 0;
+          let left = 0;
+          if (this.currentTab) {
+            width = this.currentTab.css('width');
+            left = this.currentTab.offset().left;
+          }
+          $('.et-hero-tab-slider').css('width', width);
+          $('.et-hero-tab-slider').css('left', left);
+        }
+
+      }
+
+      new StickyNavigation();
+
+      function reveal() {
+        var reveals = document.querySelectorAll(".key-point");
+        for (var i = 0; i < reveals.length; i++) {
+          var windowHeight = window.innerHeight;
+          var elementTop = reveals[i].getBoundingClientRect().top;
+          var elementVisible = 50;
+          if (elementTop < windowHeight - elementVisible) {
+            reveals[i].classList.add("active");
+          } else {
+            reveals[i].classList.remove("active");
+          }
+        }
+      }
+
+      window.addEventListener("scroll", reveal);
+
+      // To check the scroll position on page load
+      reveal();
+    });
+
+    window.onscroll = function () {
+      var bottom = document.getElementById('bottom');
+
+      if ((window.pageYOffset) >= 50) {
+        bottom.style.display = 'block';
+      } else {
+        bottom.style.display = 'none';
+      }
+    }
+  </script>
 </body>
 
 </html>
