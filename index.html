@@ -8,32 +8,41 @@
   <title>
     Co-Op Fence and Construction
   </title>
+  <link rel="icon" type="image/png" href="favicon.png" />
   <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js"
     integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe" crossorigin="anonymous">
   </script>
 </head>
 
 <body>
-  <!-- Hero -->
-  <section class="et-hero-tabs">
-    <section class="et-slide" id="tab-home">
-      <h1 style="text-transform: uppercase">Co-Op Fence & Construction</h1>
-      <p><i>Quality comes first for every job. With 30 years of experience, we strive for excellence no matter the size
-          of the job.</i></p>
-    </section>
-    <div class="et-hero-tabs-container">
-      <a class="et-hero-tab" href="#tab-home">Home</a>
-      <a class="et-hero-tab" href="#tab-about">About</a>
-      <a class="et-hero-tab" href="#tab-projects">Projects</a>
-      <a class="et-hero-tab" href="#tab-contact">Contact</a>
-      <span class="et-hero-tab-slider"></span>
+  <nav class="sticky navbar">
+    <div class="brand  display__logo">
+      <a href="#home" class="nav-link"> <span class="logo"></span></a>
     </div>
-  </section>
+    <ul class="nav-menu">
+      <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+      <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+      <li class="nav-item"><a href="#portfolio" class="nav-link">Projects</a></li>
+      <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
+    <div class="hamburger">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
+  </nav>
 
-  <!-- Main -->
-  <main class="et-main">
-    <section class="et-slide" id="tab-about">
-      <div class="grid-container">
+  <main>
+    <section class="home">
+      <div id="home">
+        <h1 style="text-transform: uppercase">Co-Op Fence & Construction</h1>
+        <p><i>Quality comes first for every job. With 30 years of experience, we strive for excellence no matter the
+            size of the job.</i></p>
+      </div>
+    </section>
+    <section class="about">
+      <span id="about"></span>
+      <div class="grid-container" id="grid-container-about">
         <div class="key-points">
           <ul class="tool-list" id="tool-list">
             <li class="key-point">Maintained positive track record in the marketplace</li>
@@ -51,11 +60,11 @@
           <div class="about-us-text">
             <h1>About Us</h1>
             <p>We are a fence and construction company based in Kansas City, Missouri.</p>
-            <p>With over 30 years of experience in fencing and decks, we only use use the highest quality of materials.
+            <p>With over 30 years of experience in fencing and decks, we only use use the highest quality of
+              materials.
               Our team of experts are always professional and courteous.
             </p>
           </div>
-          <hr>
           <div class="bbb">
             <p class="bbb-text">For your peace of mind, we are accredited by the <a
                 href="https://www.bbb.org/us/mo/kansas-city/profile/fence-sales/coop-fence-and-construction-0674-1000024357"
@@ -65,7 +74,8 @@
         </div>
       </div>
     </section>
-    <section class="et-slide" id="tab-projects">
+    <section class="portfolio">
+      <span id="portfolio"></span>
       <div class="project-heading">
         <h1>Projects</h1>
         <p>Here are some of our recent projects. Please feel free to use them for inspiration.</p>
@@ -82,19 +92,20 @@
         <div class="tab__content">
           <div class="gallery">
             <ul class="gallery-list">
-              <li>
-                <img src="./images/chain/chain1.webp"></li>
+              <li><img src="./images/chain/chain1.webp"></li>
               <li><img src="./images/chain/chain2.webp""></li>
-              <li><img src=" ./images/chain/chain3.webp""> </li> <li><img src="./images/chain/chain4.webp""></li>
-              <li><img src=" ./images/chain/chain5.webp""> </li> <li><img src="./images/chain/chain6.webp""></li>
-              <li><img src=" ./images/chain/chain7.webp""> </li> <li><img src="./images/chain/chain8.webp""></li>
-              <li><img src=" ./images/chain/chain9.webp""> </li> <li><img src="./images/chain/chain10.webp""></li>
-              <li><img src=" ./images/chain/chain11.webp""> </li> <li><img src="./images/chain/chain12.webp""></li>
-            </ul>
+                <li><img src=" ./images/chain/chain3.webp""> </li> <li><img src="./images/chain/chain4.webp""></li>
+                <li><img src=" ./images/chain/chain5.webp""> </li> <li><img src="./images/chain/chain6.webp""></li>
+                <li><img src=" ./images/chain/chain7.webp""> </li> <li><img src="./images/chain/chain8.webp""></li>
+                <li class=" li-mobile"><img src=" ./images/chain/chain9.webp""> </li> 
+                <li class=" li-mobile"><img src="./images/chain/chain10.webp""></li>
+                <li class=" li-mobile"><img src=" ./images/chain/chain11.webp""> </li> 
+                <li class=" li-mobile"><img src="./images/chain/chain12.webp""></li>
+              </ul>
+            </div>
           </div>
-        </div>
-
-        <div class=" tab__content">
+  
+          <div class=" tab__content">
                 <div class="gallery">
                   <ul class="gallery-list" id="gallery-wood">
                     <li><img src="./images/wood/wood1.webp"></li>
@@ -105,16 +116,16 @@
                     <li><img src="./images/wood/wood6.webp"></li>
                     <li><img src="./images/wood/wood7.webp"></li>
                     <li><img src="./images/wood/wood8.webp"></li>
-                    <li><img src="./images/wood/wood9.webp"></li>
-                    <li><img src="./images/wood/wood10.webp"></li>
-                    <li><img src="./images/wood/wood11.webp"></li>
-                    <li><img src="./images/wood/wood12.webp"></li>
-                    <li><img src="./images/wood/wood13.webp"></li>
-                    <li><img src="./images/wood/wood14.webp"></li>
-                    <li><img src="./images/wood/wood15.webp"></li>
-                    <li><img src="./images/wood/wood16.webp"></li>
-                    <li><img src="./images/wood/wood17.webp"></li>
-                    <li><img src="./images/wood/wood18.webp"></li>
+                    <li class="li-mobile"><img src="./images/wood/wood9.webp"></li>
+                    <li class="li-mobile"><img src="./images/wood/wood10.webp"></li>
+                    <li class="li-mobile"><img src="./images/wood/wood11.webp"></li>
+                    <li class="li-mobile"><img src="./images/wood/wood12.webp"></li>
+                    <li class="li-mobile"><img src="./images/wood/wood13.webp"></li>
+                    <li class="li-mobile"><img src="./images/wood/wood14.webp"></li>
+                    <li class="li-mobile"><img src="./images/wood/wood15.webp"></li>
+                    <li class="li-mobile"><img src="./images/wood/wood16.webp"></li>
+                    <li class="li-mobile"><img src="./images/wood/wood17.webp"></li>
+                    <li class="li-mobile"><img src="./images/wood/wood18.webp"></li>
                   </ul>
                 </div>
           </div>
@@ -130,11 +141,11 @@
                 <li><img src="./images/steel/steel6.webp"></li>
                 <li><img src="./images/steel/steel7.webp"></li>
                 <li><img src="./images/steel/steel8.webp"></li>
-                <li><img src="./images/steel/steel9.webp"></li>
-                <li><img src="./images/steel/steel10.webp"></li>
-                <li><img src="./images/steel/steel11.webp"></li>
-                <li><img src="./images/steel/steel12.webp"></li>
-                <li><img src="./images/steel/steel13.webp"></li>
+                <li class="li-mobile"><img src="./images/steel/steel9.webp"></li>
+                <li class="li-mobile"><img src="./images/steel/steel10.webp"></li>
+                <li class="li-mobile"><img src="./images/steel/steel11.webp"></li>
+                <li class="li-mobile"><img src="./images/steel/steel12.webp"></li>
+                <li class="li-mobile"><img src="./images/steel/steel13.webp"></li>
               </ul>
             </div>
           </div>
@@ -152,8 +163,9 @@
         <div style="clear:both;"></div>
       </div>
     </section>
-    <section class="et-slide" id="tab-contact">
-      <div class="grid-container">
+    <section class="contact">
+      <span id="contact"></span>
+      <div class="grid-container" id="grid-container-contact">
         <div id="form-main">
           <div id="form-div">
             <form class="form" id="form1" action="mailto:cait.sidener@gmail.com" method="POST"
@@ -177,49 +189,53 @@
               </div>
             </form>
           </div>
+          <div class="spacer"></div>
         </div>
         <div class="contact-info">
           <h1>Contact Us</h1>
-          <div class="contact-text">
-            <div class="img-icon">
-              <img src="./images/map.png" />
+          <div class="contact-container">
+            <div class="contact-text">
+              <div class="img-icon">
+                <img src="./images/map.png" />
+              </div>
+              <div class="left-text">
+                <p>5007 NW Linden Rd</p>
+                <p>Kansas, City, MO 64151</p>
+              </div>
             </div>
-            <div class="left-text">
-              <p>5007 NW Linden Rd</p>
-              <p>Kansas, City, MO 64151</p>
+            <div class="contact-text">
+              <div class="img-icon">
+                <img src="./images/phone.png" />
+              </div>
+              <div class="left-text">
+                <p><a style="color: #fff;" href="tel:8166568040">816-656-8040</a></p>
+              </div>
             </div>
-          </div>
-          <div class="contact-text">
-            <div class="img-icon">
-              <img src="./images/phone.png" />
+            <div class="contact-text">
+              <div class="img-icon">
+                <img src="./images/email.png" />
+              </div>
+              <div class="left-text">
+                <p><a style="color: #fff;"
+                    href="mailto:coopfenceandconstruction@gmail.com">coopfenceandconstruction@gmail.com</a></p>
+              </div>
             </div>
-            <div class="left-text">
-              <p><a style="color: #fff;" href="tel:8166568040">816-656-8040</a></p>
-            </div>
-          </div>
-          <div class="contact-text">
-            <div class="img-icon">
-              <img src="./images/email.png" />
-            </div>
-            <div class="left-text">
-              <p><a style="color: #fff;"
-                  href="mailto:coopfenceandconstruction@gmail.com">coopfenceandconstruction@gmail.com</a></p>
-            </div>
-          </div>
-          <div class="contact-text">
-            <div class="img-icon">
-              <img src="./images/time.png" />
-            </div>
-            <div class="left-text">
-              <p>Monday - Friday: 8am - 6pm</p>
-              <p>Saturday & Sunday: By Appointment</p>
+            <div class="contact-text">
+              <div class="img-icon">
+                <img src="./images/time.png" />
+              </div>
+              <div class="left-text">
+                <p>Monday - Friday: 8am - 6pm</p>
+                <p>Saturday & Sunday: By Appointment</p>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
   </main>
-  <footer id="bottom">
+
+  <footer class="footer">
     <div class="rounded-social-buttons">
       <a class="social-button facebook" href="https://www.facebook.com/CoopfenceandconstructionLLC/" target="_blank"><i
           class="fab fa-facebook-f"></i></a>
@@ -233,6 +249,7 @@
     <p class="footer-text">Copyright Co-Op Fence and Construction Ltd 2022</p>
   </footer>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://pagination.js.org/dist/2.1.5/pagination.min.js"></script>
   <script src="js/script.js"></script>
 </body>
 
