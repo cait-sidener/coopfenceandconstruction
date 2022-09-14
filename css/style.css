@@ -893,6 +893,10 @@ footer {
 		transform: translateY(-8px) rotate(-45deg);
 	}
 
+	h1, p {
+		text-align: center;
+	}
+
 	/* HOME */
 	#home {
 		padding: 0 20px;
