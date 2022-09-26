@@ -129,7 +129,7 @@ main {
 	background-size: contain;
 	height: 75px;
 	margin-left: 30px;
-	width: 75px;
+	width: 130px;
 	display: inline-block;
 	padding-top: .3125rem;
 	padding-bottom: .3125rem;
@@ -365,7 +365,7 @@ main {
 }
 
 .key-points {
-	background-color: #015f86;
+	background-color: #8b0000;
 	box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 	color: #fff;
 	line-height: 1.8;
@@ -578,14 +578,14 @@ div.gallery ul li img:hover {
 }
 
 /* CONTACT */
-#button-blue {
+#button-red {
 	border-radius: 5px;
 	font-family: 'Montserrat', Arial, Helvetica, sans-serif;
 	float: left;
 	width: 100%;
 	border: 0px solid transparent;
 	cursor: pointer;
-	background-color: #015f86;
+	background-color: #8b0000;
 	color: white;
 	font-size: 18px;
 	padding-top: 22px;
@@ -597,14 +597,14 @@ div.gallery ul li img:hover {
 	font-weight: 300;
 }
 
-#button-blue:hover {
-	background-color: #fff;
-	color: #000;
+#button-red:hover {
+	background-color: #000;
+	color: #fff;
 	border: 1px solid #000;
 }
 
 .contact-info {
-	background-color: #015f86;
+	background-color: #8b0000;
 	color: #fff;
 	padding: 25px;
 }
